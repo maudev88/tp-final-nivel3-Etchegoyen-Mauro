@@ -59,7 +59,7 @@
                     <div class="col-3">
                         <div class="mb-3">
                             <asp:Label Text="Filtro" runat="server" />
-                            <asp:TextBox runat="server" ID="txtFiltroAvanzado" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtFiltroAvanzado_TextChanged" />
+                            <asp:TextBox runat="server" ID="txtFiltroAvanzado" CssClass="form-control"  />
                         </div>
                     </div>
                     <div class="col-3 p-4">
@@ -83,6 +83,7 @@
                     <asp:BoundField HeaderText="Categoria" DataField="Categorias.Descripcion" />
                     <asp:BoundField HeaderText="Marcas" DataField="Marcas.Descripcion" />
                     <asp:BoundField HeaderText="Precio" DataField="Precio" />
+                    <asp:CommandField HeaderText="Accion" ShowSelectButton="true" SelectText="Seleccionar" />
                 </Columns>
 
             </asp:GridView>

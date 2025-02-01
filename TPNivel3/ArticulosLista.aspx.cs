@@ -47,17 +47,6 @@ namespace TPNivel3
             dgvArticulos.DataBind();
         }
 
-        protected void txtFiltroAvanzado_TextChanged(object sender, EventArgs e)
-        {
-            List<Articulo> lista = (List<Articulo>)Session["listaArticulos"];
-            List<Articulo> listaFiltrada = lista.FindAll(x => x.Categorias.Descripcion.ToUpper().Contains(txtFiltroAvanzado.Text.ToUpper())
-            || x.Marcas.Descripcion.ToUpper().Contains(txtFiltroAvanzado.Text.ToUpper())
-            || x.Nombre.ToUpper().Contains(txtFiltroAvanzado.Text.ToUpper())
-            || x.CodigoArticulo.ToUpper().Contains(txtFiltroAvanzado.Text.ToUpper()));
-            dgvArticulos.DataSource = listaFiltrada;
-            dgvArticulos.DataBind();
-        }
-
         protected void chkAvanzado_CheckedChanged(object sender, EventArgs e)
         {
             FiltroAvanzado = chkAvanzado.Checked;
@@ -98,6 +87,13 @@ namespace TPNivel3
                 throw;
             }
         }
+
+       
+      
+
+       
+
+       
 
       
     }

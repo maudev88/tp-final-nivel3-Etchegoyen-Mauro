@@ -46,8 +46,8 @@
                             <ItemTemplate>
                                 <div class="col d-flex  justify-content-center" style="min-width: 358px;" >
                                     <div style="width: 300px;" class="card mb-xxl-5  w-50px p-xl-1">
-                                        <div  class="d-flex flex-wrap justify-content-center" style="/*width: 200px;*/ /*max-height: 300px;*/ object-fit:cover">
-                                            <img src="<%#Eval("Imagen")%>" <%--class="card-img-top"--%> style="max-height: 300px; max-height: 293px;"  onerror="setDefaultImage(this)" alt="..." />
+                                        <div  class="d-flex flex-wrap justify-content-center" style="padding: 12px; object-fit:cover">
+                                            <img src="<%#Eval("Imagen")%>" <%--class="card-img-top"--%> style="max-height: 293px; max-width: 296px;"  onerror="setDefaultImage(this)" alt="..." />
                                         </div>
                                         <div class="card-body d-grid align-content-end" >
                                             <h5 class="card-title"><%#Eval("Nombre")%></h5>
