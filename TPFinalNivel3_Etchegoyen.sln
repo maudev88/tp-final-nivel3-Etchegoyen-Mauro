@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35425.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPNivel3", "TPNivel3\TPNivel3.csproj", "{CCFE8402-ACA7-450C-9539-47F53D48B707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.csproj", "{5F3BE6AF-FBFA-4A80-8D5E-17BEFF92B04C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{16027E25-4CE3-4163-A796-BC7D8C2AF871}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCFE8402-ACA7-450C-9539-47F53D48B707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCFE8402-ACA7-450C-9539-47F53D48B707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCFE8402-ACA7-450C-9539-47F53D48B707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCFE8402-ACA7-450C-9539-47F53D48B707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F3BE6AF-FBFA-4A80-8D5E-17BEFF92B04C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3BE6AF-FBFA-4A80-8D5E-17BEFF92B04C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3BE6AF-FBFA-4A80-8D5E-17BEFF92B04C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3BE6AF-FBFA-4A80-8D5E-17BEFF92B04C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16027E25-4CE3-4163-A796-BC7D8C2AF871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16027E25-4CE3-4163-A796-BC7D8C2AF871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16027E25-4CE3-4163-A796-BC7D8C2AF871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16027E25-4CE3-4163-A796-BC7D8C2AF871}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D655C6D-B3A8-40AC-BC38-B18B078626FC}
+	EndGlobalSection
+EndGlobal
