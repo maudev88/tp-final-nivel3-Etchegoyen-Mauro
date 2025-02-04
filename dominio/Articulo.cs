@@ -8,8 +8,7 @@ namespace dominio
 {
     public class Articulo
     {
-        //Código de artículo. Nombre. Descripción. Marca(seleccionable de una lista desplegable). 
-        //Categoría(seleccionable de una lista desplegable. Imagen. Precio.
+       
         
         public int Id { get; set; }
 
@@ -30,9 +29,6 @@ namespace dominio
         public Elemento Categorias { get; set; }
 
         public Elemento Marcas { get; set; }
-
-
-
 
     }
 }

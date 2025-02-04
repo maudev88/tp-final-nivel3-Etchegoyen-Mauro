@@ -22,7 +22,11 @@ namespace negocio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_WEB_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select A.Id as Aidi, Codigo, Nombre, A.Descripcion as Articulo, IdMarca, IdCategoria, ImagenUrl, Precio, C.Descripcion as Categorias, M.Descripcion as Marcas from ARTICULOS A, CATEGORIAS C, MARCAS M where C.Id = A.IdCategoria AND M.Id = A.IdMarca";
+                comando.CommandText = "Select Codigo, Nombre, A.Descripcion as Articulo, IdMarca, IdCategoria, ImagenUrl, Precio, A.Id as Aidi, C.Descripcion as Categorias, M.Descripcion as Marcas from ARTICULOS A, CATEGORIAS C, MARCAS M where C.Id = A.IdCategoria AND M.Id = A.IdMarca";
+
+                if (id != "")
+                    comando.CommandText += " and A.Id = " + id;
+
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -211,9 +215,7 @@ namespace negocio
 
         public void eliminar(int id)
         {
-            // Usé sólo el eliminar físico porque para el otro había que agregar una 
-            // columna Activo a la base de datos
-
+          
             try
             {
                 AccesoDatos datos = new AccesoDatos();
@@ -227,11 +229,6 @@ namespace negocio
                 throw ex;
             }
         }
-
-
-
-
-
 
     }
 }

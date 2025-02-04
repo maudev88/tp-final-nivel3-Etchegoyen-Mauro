@@ -22,10 +22,12 @@ namespace TPNivel3
             {
                 repRepetidor.DataSource = ListaArticulos;
                 repRepetidor.DataBind();
+
             }
+
         }
 
-       
+
         protected void btnDetalle_Click(object sender, EventArgs e)
         {
             string valor = ((Button)sender).CommandArgument;
@@ -37,12 +39,19 @@ namespace TPNivel3
         {
             try
             {
+
+
                 ArticulosNegocio negocio = new ArticulosNegocio();
+
+
                 repRepetidor.DataSource = negocio.filtrar(
                     ddlCampo.SelectedItem.ToString(),
                     ddlCriterio.SelectedItem.ToString(),
                     txtFiltroAvanzado.Text);
-                repRepetidor.DataBind();
+                    repRepetidor.DataBind();
+
+
+
             }
             catch (Exception ex)
             {
@@ -51,7 +60,7 @@ namespace TPNivel3
             }
         }
 
-        protected void ddlCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
             ddlCriterio.Items.Clear();
             if (ddlCampo.SelectedItem.ToString() == "Precio")
@@ -68,6 +77,9 @@ namespace TPNivel3
             }
         }
 
-      
+        protected void btnNuevaBusqueda_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx", false);
+        }
     }
 }

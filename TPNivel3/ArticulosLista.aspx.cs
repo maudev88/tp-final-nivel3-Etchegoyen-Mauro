@@ -14,6 +14,13 @@ namespace TPNivel3
         public bool FiltroAvanzado { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Seguridad.esAdmin(Session["usuario"]))
+            {
+                Session.Add("error", "Se requiere permisos de admin para acceder a esta pantalla");
+                Response.Redirect("Error.aspx");
+            }
+
+
             FiltroAvanzado = chkAvanzado.Checked;
             if (!IsPostBack)
             {
@@ -46,6 +53,10 @@ namespace TPNivel3
             dgvArticulos.DataSource = listaFiltrada;
             dgvArticulos.DataBind();
         }
+
+
+       
+
 
         protected void chkAvanzado_CheckedChanged(object sender, EventArgs e)
         {
@@ -84,17 +95,19 @@ namespace TPNivel3
             catch (Exception ex)
             {
                 Session.Add("error", ex);
-                throw;
+                
             }
         }
 
        
-      
+
+        protected void btnNuevaBusqueda_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ArticulosLista.aspx", false);
+        }
+
 
        
 
-       
-
-      
     }
 }

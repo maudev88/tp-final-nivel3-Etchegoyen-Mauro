@@ -9,28 +9,21 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <h1>Lista de Artículos</h1>
-
     <asp:UpdatePanel runat="server">
         <ContentTemplate>
 
+            <h1>Lista de Artículos</h1>
 
             <div class="row">
                 <div class="col-6">
                     <div class="mb-3">
-
                         <asp:Label Text="Filtrar:" runat="server" />
-
                         <asp:TextBox runat="server" ID="txtFiltro" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtFiltro_TextChanged" />
-
-
                     </div>
                 </div>
                 <div class="col-6" style="display: flex; flex-direction: column; justify-content: flex-end;">
-                    <div class="mb-3">
-
+                    <div class="mb-3 d-flex gap-2">
                         <asp:CheckBox Text="Filtro Avanzado:" runat="server" ID="chkAvanzado" AutoPostBack="true" OnCheckedChanged="chkAvanzado_CheckedChanged" />
-
                     </div>
                 </div>
 
@@ -42,7 +35,7 @@
                         <div class="mb-3">
 
                             <asp:Label Text="Campo" ID="lblCampo" runat="server" />
-                            <asp:DropDownList runat="server" AutoPostBack="true" CssClass="form-select  dropdown-toggle" ID="ddlCampo" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
+                            <asp:DropDownList runat="server" AutoPostBack="true" CssClass="form-select  dropdown-toggle" required ID="ddlCampo" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
                                 <asp:ListItem Text="Categoria" />
                                 <asp:ListItem Text="Marca" />
                                 <asp:ListItem Text="Precio" />
@@ -53,18 +46,20 @@
                     <div class="col-3">
                         <div class="mb-3">
                             <asp:Label Text="Criterio" runat="server" />
-                            <asp:DropDownList runat="server" ID="ddlCriterio" CssClass="form-select  dropdown-toggle"></asp:DropDownList>
+                            <asp:DropDownList runat="server" ID="ddlCriterio" required CssClass="form-select dropdown-toggle"></asp:DropDownList>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="mb-3">
                             <asp:Label Text="Filtro" runat="server" />
-                            <asp:TextBox runat="server" ID="txtFiltroAvanzado" CssClass="form-control"  />
+                            <asp:TextBox runat="server" ID="txtFiltroAvanzado" CssClass="form-control" required />
                         </div>
                     </div>
                     <div class="col-3 p-4">
-                        <div class="mb-3">
+                        <div class="mb-3 d-flex gap-4">
                             <asp:Button Text="Buscar" runat="server" CssClass="btn btn-primary" ID="btnBuscar" OnClick="btnBuscar_Click" />
+                            <asp:Button Text="Nueva Búsqueda" CssClass="btn btn-warning" runat="server" ID="btnNuevaBusqueda" OnClick="btnNuevaBusqueda_Click" />
+
                         </div>
                     </div>
                 </div>

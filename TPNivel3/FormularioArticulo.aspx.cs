@@ -41,7 +41,7 @@ namespace TPNivel3
                 if (id != "" && !IsPostBack)
                 {
                     ArticulosNegocio negocio = new ArticulosNegocio();
-                    Articulo seleccionado = (negocio.listar(id))[int.Parse(id) - 1];
+                    Articulo seleccionado = (negocio.listar(id))[0];
 
                     Session.Add("articuloSeleccionado", seleccionado);
 
@@ -71,6 +71,10 @@ namespace TPNivel3
         {
             try
             {
+                Page.Validate();
+                if (!Page.IsValid)
+                    return;
+
                 Articulo nuevo = new Articulo();
                 ArticulosNegocio negocio = new ArticulosNegocio();
 
@@ -82,7 +86,17 @@ namespace TPNivel3
                 nuevo.Marcas.Id = int.Parse(ddlMarca.SelectedValue);
                 nuevo.Precio = Decimal.Parse(txtPrecio.Text);
                 nuevo.Descripcion = txtDescripcion.Text;
-                nuevo.Imagen = txtImagen.Text;
+
+                if (txtImagen.Text == "")
+                {
+                    nuevo.Imagen = "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg";
+                }
+                else
+                {
+                    nuevo.Imagen = txtImagen.Text;
+
+                }
+               
 
                 if (Request.QueryString["id"] != null)
                 {
@@ -108,16 +122,27 @@ namespace TPNivel3
             imgArticulos.ImageUrl = txtImagen.Text;
         }
 
-       
-
-        protected void btnInactivar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
+            ConfirmaEliminacion = true;
+        }
 
+        protected void btnConfirmarEliminacion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (chkConfirmaEliminacion.Checked)
+                {
+                    ArticulosNegocio negocio = new ArticulosNegocio();
+                    negocio.eliminar(int.Parse(txtId.Text));
+                    Response.Redirect("ArticulosLista.aspx", false);
+                }
+            }
+            catch (Exception ex)
+            {
+                Session.Add("error", ex.ToString());
+                Response.Redirect("Error.aspx");
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace TPNivel3
                 if (user != "" && !IsPostBack)
                 {
                     ArticulosNegocio negocio = new ArticulosNegocio();
-                    Articulo seleccionado = (negocio.listar(user))[int.Parse(user) - 1];
+                    Articulo seleccionado = (negocio.listar(user))[0];
 
                     Session.Add("articuloSeleccionado", seleccionado);
 
