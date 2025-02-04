@@ -55,7 +55,6 @@ namespace TPNivel3
                     txtImagen.Text = seleccionado.Imagen;
                     txtImagen_TextChanged(sender, e);
 
-
                 }
 
             }

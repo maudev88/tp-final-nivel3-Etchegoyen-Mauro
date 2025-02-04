@@ -27,7 +27,6 @@ namespace TPNivel3
 
         }
 
-
         protected void btnDetalle_Click(object sender, EventArgs e)
         {
             string valor = ((Button)sender).CommandArgument;
@@ -49,7 +48,6 @@ namespace TPNivel3
                     ddlCriterio.SelectedItem.ToString(),
                     txtFiltroAvanzado.Text);
                     repRepetidor.DataBind();
-
 
 
             }

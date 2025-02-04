@@ -26,9 +26,7 @@ namespace TPNivel3
             UsuarioNegocio negocio = new UsuarioNegocio();
 
             try
-            {
-
-              
+            {           
 
                 if (Validacion.validaTextoVacio(txtEmail) || Validacion.validaTextoVacio(txtPassword))
                 {

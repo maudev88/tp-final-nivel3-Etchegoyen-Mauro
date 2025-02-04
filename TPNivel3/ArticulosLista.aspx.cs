@@ -55,9 +55,6 @@ namespace TPNivel3
         }
 
 
-       
-
-
         protected void chkAvanzado_CheckedChanged(object sender, EventArgs e)
         {
             FiltroAvanzado = chkAvanzado.Checked;
@@ -100,14 +97,11 @@ namespace TPNivel3
         }
 
        
-
         protected void btnNuevaBusqueda_Click(object sender, EventArgs e)
         {
             Response.Redirect("ArticulosLista.aspx", false);
         }
-
-
-       
+             
 
     }
 }

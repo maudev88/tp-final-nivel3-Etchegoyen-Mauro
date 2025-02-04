@@ -62,9 +62,6 @@
                             runat="server" ID="imgArticulos" CssClass="mb-xxl-4" Style="max-height: 484px;" />
 
 
-
-
-
                         <% if (!ConfirmaEliminacion)
                             { %>
 
@@ -85,13 +82,13 @@
                             <asp:Button Text="Eliminar" ID="btnConfirmarEliminacion" CssClass="btn btn-outline-danger" runat="server" OnClick="btnConfirmarEliminacion_Click" />
                         </div>
                         <% } %>
+
+
             </ContentTemplate>
         </asp:UpdatePanel>
 
     </div>
-
     </div>
-
 
         <div class="row">
             <div class="col-6">
@@ -102,7 +99,6 @@
 
             </div>
         </div>
-
 
     </div>
 
