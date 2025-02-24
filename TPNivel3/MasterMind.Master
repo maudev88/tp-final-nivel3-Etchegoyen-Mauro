@@ -49,7 +49,7 @@
             </div>
         </nav>
          
-        <div class=" mt-md-5 m-xxl-5">
+        <div style="margin: 48px;">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

@@ -24,19 +24,19 @@
                 <div class=" d-flex flex-column align-items-center">
 
 
-                    <div class="d-flex gap-4 mb-xxl-5 w-50">
-                        <asp:DropDownList runat="server" CssClass="form-select" ID="ddlCampo" AutoPostBack="true" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
+                    <div class="d-flex gap-4  flex-wrap" style="margin-bottom: 50px;" >
+                        <asp:DropDownList runat="server" CssClass="form-select" style="min-width: 160px; max-width: 160px;" ID="ddlCampo" AutoPostBack="true" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
                             <asp:ListItem Text="Categoria" />
                             <asp:ListItem Text="Marca" />
                             <asp:ListItem Text="Precio" />
                         </asp:DropDownList>
 
-                        <asp:DropDownList runat="server" ID="ddlCriterio"  CssClass="form-select  dropdown-toggle">
+                        <asp:DropDownList runat="server" ID="ddlCriterio" style="min-width: 160px; max-width: 160px;" CssClass="form-select  dropdown-toggle">
                              <asp:ListItem Text=" " />
                         </asp:DropDownList>
 
 
-                        <asp:TextBox runat="server" ID="txtFiltroAvanzado"  CssClass="form-control"   />
+                        <asp:TextBox runat="server" ID="txtFiltroAvanzado" style="min-width: 160px; max-width: 160px;" CssClass="form-control"   />
                         <asp:Button Text="Buscar" CssClass="btn btn-primary" ID="btnBuscar" OnClick="btnBuscar_Click" runat="server"  />
                         <asp:Button Text="Nueva Búsqueda" CssClass="btn btn-warning" id="btnNuevaBusqueda" OnClick="btnNuevaBusqueda_Click" runat="server" />
                     </div>
