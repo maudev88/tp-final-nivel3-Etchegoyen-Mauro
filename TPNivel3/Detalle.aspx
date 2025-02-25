@@ -16,6 +16,14 @@
         body {
             background-color: #efefef !important;
         }
+
+         @media screen and (max-width: 991px) {
+             .blanco {
+                 margin: 200px 0px !important;
+                 padding: 15px;
+             }
+         }
+
     </style>
 
 
@@ -26,7 +34,7 @@
 
     <h2 id="txtId" class="d-none" runat="server"></h2>
 
-    <div class="d-flex justify-content-around mt-xxl-5 p-xxl-5" style="margin: 200px; margin-bottom: 62px; background-color: white;">
+    <div class="d-flex justify-content-around mt-xxl-5 p-xxl-5 blanco"  style="margin: 200px; margin-bottom: 62px; background-color: white;">
         <div>
             <img src="" id="txtImg" runat="server" onerror="setDefaultImage(this)" alt="Alternate Text" style="max-height: 484px;" />
         </div>

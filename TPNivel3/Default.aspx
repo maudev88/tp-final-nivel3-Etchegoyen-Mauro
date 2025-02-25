@@ -12,6 +12,27 @@
         body {
             background-color: #efefef!important;
         }
+
+        @media screen and (max-width: 991px) {
+            .botonn {
+                font-size: 32px!important;
+            }
+            .tarjeta {
+                font-size: 28px;
+            }
+            .elh5 {
+                font-size: 28px;
+            }
+            .desple1 {
+                width: 256px!important;
+                font-size: 30px!important;
+                
+            }
+            .filtros {
+                flex-direction: column;
+            }
+        }
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -24,21 +45,21 @@
                 <div class=" d-flex flex-column align-items-center">
 
 
-                    <div class="d-flex gap-4  flex-wrap" style="margin-bottom: 50px;" >
-                        <asp:DropDownList runat="server" CssClass="form-select" style="min-width: 160px; max-width: 160px;" ID="ddlCampo" AutoPostBack="true" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
+                    <div class=" gap-4 filtros " style="margin-bottom: 50px; display:flex; " >
+                        <asp:DropDownList runat="server" CssClass="form-select desple1" style=" width: 160px;" ID="ddlCampo"  AutoPostBack="true" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
                             <asp:ListItem Text="Categoria" />
                             <asp:ListItem Text="Marca" />
                             <asp:ListItem Text="Precio" />
                         </asp:DropDownList>
 
-                        <asp:DropDownList runat="server" ID="ddlCriterio" style="min-width: 160px; max-width: 160px;" CssClass="form-select  dropdown-toggle">
+                        <asp:DropDownList runat="server" CssClass="form-select dropdown-toggle desple1" ID="ddlCriterio" style=" width: 160px;">
                              <asp:ListItem Text=" " />
                         </asp:DropDownList>
 
 
-                        <asp:TextBox runat="server" ID="txtFiltroAvanzado" style="min-width: 160px; max-width: 160px;" CssClass="form-control"   />
-                        <asp:Button Text="Buscar" CssClass="btn btn-primary" ID="btnBuscar" OnClick="btnBuscar_Click" runat="server"  />
-                        <asp:Button Text="Nueva Búsqueda" CssClass="btn btn-warning" id="btnNuevaBusqueda" OnClick="btnNuevaBusqueda_Click" runat="server" />
+                        <asp:TextBox runat="server" ID="txtFiltroAvanzado" style=" width: 160px;" CssClass="form-control desple1"   />
+                        <asp:Button Text="Buscar" CssClass="btn btn-primary desple1" ID="btnBuscar" OnClick="btnBuscar_Click" runat="server"  />
+                        <asp:Button Text="Nueva Búsqueda" CssClass="btn btn-warning desple1" id="btnNuevaBusqueda" OnClick="btnNuevaBusqueda_Click" runat="server" />
                     </div>
                     
 
@@ -51,12 +72,12 @@
                                         <div  class="d-flex flex-wrap justify-content-center" style="padding: 12px; object-fit:cover">
                                             <img src="<%#Eval("Imagen")%>" <%--class="card-img-top"--%> style="max-height: 293px; max-width: 296px;"  onerror="setDefaultImage(this)" alt="..." />
                                         </div>
-                                        <div class="card-body d-grid align-content-end" >
-                                            <h5 class="card-title"><%#Eval("Nombre")%></h5>
+                                        <div class="card-body d-grid align-content-end tarjeta" >
+                                            <h5 class="card-title elh5"><%#Eval("Nombre")%></h5>
                                             <p class="card-text"><%#Eval("Marcas.Descripcion")%></p>
                                             <p class="card-text"><%#Eval("Categorias.Descripcion")%></p>
                                             <p class="card-text"><%#Eval("Precio")%></p>
-                                            <asp:Button Text="Ver Detalle" CssClass="btn btn-primary" ID="btnDetalle"
+                                            <asp:Button Text="Ver Detalle" CssClass="btn btn-primary botonn" ID="btnDetalle"
                                                 CommandArgument='<%#Eval("Id")%>' CommandName="ArticuloId"
                                                 OnClick="btnDetalle_Click" runat="server" />
                                         </div>
