@@ -44,10 +44,12 @@
             <div class="col">
                 <div class=" d-flex flex-column align-items-center">
 
-
+                  
                     <div class=" gap-4 filtros " style="margin-bottom: 50px; display:flex; " >
+                        
                         <asp:DropDownList runat="server" CssClass="form-select desple1" style=" width: 160px;" ID="ddlCampo"  AutoPostBack="true" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
-                            <asp:ListItem Text="Categoria" />
+                            <asp:ListItem Text="Seleccione"  disabled="true" />
+                            <asp:ListItem Text="Categoría" />
                             <asp:ListItem Text="Marca" />
                             <asp:ListItem Text="Precio" />
                         </asp:DropDownList>
