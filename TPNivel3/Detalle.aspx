@@ -58,7 +58,7 @@
 
     <div class="d-flex justify-content-around  p-xxl-5 blanco"  style="margin: 200px; margin-bottom: 62px; margin-top: 50px; background-color: white;">
         <div>
-            <img src="" id="txtImg" runat="server" onerror="setDefaultImage(this)" alt="Alternate Text" style="max-height: 484px; max-width: 540px; padding-top: 31px; padding-bottom: 31px;" />
+            <img src="" id="txtImg" runat="server" onerror="setDefaultImage(this)" alt="Alternate Text" style="max-height: 484px; max-width: 540px; min-width: 347px; padding-top: 31px; padding-bottom: 31px;" />
         </div>
         <div class="d-flex flex-column gap-3">
             <div>
