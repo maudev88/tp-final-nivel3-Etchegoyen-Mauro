@@ -15,7 +15,7 @@ namespace TPNivel3
         {
             imgAvatar.ImageUrl = "https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png";
 
-            if (!(Page is Login || Page is Registro || Page is Default || Page is Error || Page is Detalle))
+            if (!(Page is Login || Page is Registro || Page is Default || Page is Error || Page is Detalle ))
             {
                 if (!Seguridad.sesionActiva(Session["usuario"]))
                     Response.Redirect("Login.aspx", false);

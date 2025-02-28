@@ -69,7 +69,7 @@
             </div>
 
             <asp:GridView runat="server" ID="dgvArticulos" DataKeyNames="Id" CssClass="table" AutoGenerateColumns="false"
-                OnSelectedIndexChanged="dgvArticulos_SelectedIndexChanged" OnPageIndexChanging="dgvArticulos_PageIndexChanging">
+                OnSelectedIndexChanged="dgvArticulos_SelectedIndexChanged" >
 
                 <Columns>
                     <asp:BoundField HeaderText="Id" DataField="Id" HeaderStyle-CssClass="oculto" ItemStyle-CssClass="oculto" />

@@ -32,6 +32,16 @@
              .acheuno {
                  font-size: 41px;
              }
+             .fav {
+                 font-size: 32px!important;
+             }
+         }
+
+         @media screen and (min-width: 1400px) {
+             .botonnDiv {
+                     position: relative;
+                     bottom: 24px;
+             }
          }
 
     </style>
@@ -39,6 +49,8 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ScriptManager runat="server" />
+
     <h1 class="text-center acheuno mb-xxl-5">Detalle del Producto</h1>
 
 
@@ -77,6 +89,21 @@
 
     </div>
 
-    <asp:Button Text="Volver al Catálogo" ID="btnVolver" CssClass="btn btn-primary botonn d-block mx-auto mt-xxl-5" OnClick="btnVolver_Click" runat="server" />
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
+
+            <div style="display: flex;  justify-content:space-around;" class="align-items-lg-center">
+        <div class="botonnDiv">
+             <asp:Button Text="Volver al Catálogo" ID="btnVolver" CssClass="btn btn-primary botonn d-block mx-auto mt-xxl-5" OnClick="btnVolver_Click" runat="server" />
+        </div>
+        <div>
+            <asp:Button Text="Agregar a favoritos" CssClass="btn btn-danger" id="btnFavoritos" OnClick="btnFavoritos_Click" runat="server" />    
+        </div>
+    </div>
+
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
+    
 
 </asp:Content>

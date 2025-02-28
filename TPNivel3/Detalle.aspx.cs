@@ -42,5 +42,44 @@ namespace TPNivel3
         {
             Response.Redirect("Default.aspx", false);
         }
+
+        protected void btnFavoritos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Page.Validate();
+                if (!Page.IsValid)
+                    return;
+
+                
+
+                Articulo nuevo = new Articulo();
+                FavoritosNegocio negocio = new FavoritosNegocio();
+
+                //nuevo.CodigoArticulo = txtCodigo.InnerText;
+                //nuevo.Nombre = txtNombre.InnerText;
+                //nuevo.Marcas = new Elemento();
+                //nuevo.Marcas.Id = int.Parse(txtMarca.InnerText);
+                //nuevo.Categorias = new Elemento();
+                //nuevo.Categorias.Id = int.Parse(txtCategoria.InnerText);
+                //nuevo.Precio = Decimal.Parse(txtPrecio.InnerText);
+
+
+                Usuario usuarioActual = (Usuario)Session["usuario"];
+                nuevo.Id = int.Parse(Request.QueryString["id"]);
+
+
+
+                negocio.agregarConSP(nuevo, usuarioActual);
+
+                btnFavoritos.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+
+                Session.Add("error", ex.ToString());
+                Response.Redirect("Error.aspx");
+            }
+        }
     }
 }
