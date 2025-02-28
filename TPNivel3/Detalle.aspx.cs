@@ -51,28 +51,22 @@ namespace TPNivel3
                 if (!Page.IsValid)
                     return;
 
+                if (Seguridad.sesionActiva(Session["usuario"]))
+                {
+                    Articulo nuevo = new Articulo();
+                    FavoritosNegocio negocio = new FavoritosNegocio();
+
+                    Usuario usuarioActual = (Usuario)Session["usuario"];
+                    nuevo.Id = int.Parse(Request.QueryString["id"]);
+
+                    negocio.agregarConSP(nuevo, usuarioActual);
+
+                    btnFavoritos.Text = "Agregado";
+                    btnFavoritos.Enabled = false;
+
+                }
+               
                 
-
-                Articulo nuevo = new Articulo();
-                FavoritosNegocio negocio = new FavoritosNegocio();
-
-                //nuevo.CodigoArticulo = txtCodigo.InnerText;
-                //nuevo.Nombre = txtNombre.InnerText;
-                //nuevo.Marcas = new Elemento();
-                //nuevo.Marcas.Id = int.Parse(txtMarca.InnerText);
-                //nuevo.Categorias = new Elemento();
-                //nuevo.Categorias.Id = int.Parse(txtCategoria.InnerText);
-                //nuevo.Precio = Decimal.Parse(txtPrecio.InnerText);
-
-
-                Usuario usuarioActual = (Usuario)Session["usuario"];
-                nuevo.Id = int.Parse(Request.QueryString["id"]);
-
-
-
-                negocio.agregarConSP(nuevo, usuarioActual);
-
-                btnFavoritos.Enabled = false;
             }
             catch (Exception ex)
             {
