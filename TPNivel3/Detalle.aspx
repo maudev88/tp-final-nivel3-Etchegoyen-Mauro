@@ -97,7 +97,7 @@
              <asp:Button Text="Volver al Catálogo" ID="btnVolver" CssClass="btn btn-primary botonn d-block mx-auto mt-xxl-5" OnClick="btnVolver_Click" runat="server" />
         </div>
         <div>
-            <asp:Button Text="Agregar a favoritos" CssClass="btn btn-danger" id="btnFavoritos" OnClick="btnFavoritos_Click" runat="server" />    
+            <asp:Button Text="Agregar a favoritos" CssClass="btn btn-danger botonn" id="btnFavoritos" OnClick="btnFavoritos_Click" runat="server" />    
         </div>
     </div>
 
