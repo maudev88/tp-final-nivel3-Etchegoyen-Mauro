@@ -12,6 +12,9 @@
             .reg {
                 height: 40px;
             }
+            .botonSalir {
+                font-size: 16px;
+            }
         }
 
         @media screen and (max-width: 991px) {
@@ -97,7 +100,7 @@
                         {
                     %>
                     <asp:Button Text="Salir" ID="btnSalir" CssClass="btn btn-success me-2 botonSalir" OnClick="btnSalir_Click" runat="server" />
-                    <asp:Label Text="User" runat="server" ID="lblUser" CssClass="text-light m-auto me-2 botonSalir" />
+                    <asp:Label Text="User" runat="server" ID="lblUser" CssClass="text-light m-auto me-2 " />
                     <% } %>
                     <asp:Image runat="server" ID="imgAvatar" Style="height: 40px; border-radius: 50%; width: 40px; margin-left: 7px;" />
                 </div>

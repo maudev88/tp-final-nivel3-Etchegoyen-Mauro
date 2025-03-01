@@ -29,7 +29,7 @@ namespace TPNivel3
                 }
             }
 
-            if ((Page is Default || Page is Error) &&  Seguridad.sesionActiva(Session["usuario"]))
+            if ((Page is Default || Page is Error || Page is Detalle) &&  Seguridad.sesionActiva(Session["usuario"]))
             {
                 Usuario user = (Usuario)Session["usuario"];
                 lblUser.Text = user.Email;
