@@ -13,7 +13,7 @@
                 font-size: 43px;
             }
             .lab {
-                font-size: 31px;
+                font-size: 28px;
             }
             .box::before {
                 content: "Eliminar";
