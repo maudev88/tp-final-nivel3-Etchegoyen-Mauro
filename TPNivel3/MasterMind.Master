@@ -7,18 +7,26 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <style>
-
         @media screen and (min-width: 992px) {
             .reg {
                 height: 40px;
             }
+
             .botonSalir {
                 font-size: 16px;
+            }
+
+            #logoAbajo {
+                width: 67px;
+                position: fixed;
+                top: 90%;
+                left: 90%;
+                z-index: 3;
             }
         }
 
         @media screen and (max-width: 991px) {
-            
+
             #logo {
                 font-size: 43px;
             }
@@ -47,17 +55,28 @@
                 align-content: center;
                 height: 82px;
             }
-           #imgAvatar {
-                width: 80px!important;
-                height: 80px!important;
-           }
-           #lista {
-               font-size: 40px;
-               margin-bottom: 0px!important;
-           }
-           .botonSalir {
-               font-size: 31px!important;
-           }
+
+            #imgAvatar {
+                width: 80px !important;
+                height: 80px !important;
+            }
+
+            #lista {
+                font-size: 40px;
+                margin-bottom: 0px !important;
+            }
+
+            .botonSalir {
+                font-size: 31px !important;
+            }
+
+            #logoAbajo {
+                width: 99px;
+                position: fixed;
+                top: 90%;
+                left: 87%;
+                z-index: 3;
+            }
         }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -106,6 +125,10 @@
                 </div>
             </div>
         </nav>
+
+        <div>
+            <img src="Imagenes/m.png" alt="Alternate Text" id="logoAbajo" />
+        </div>
 
         <div style="margin: 48px;">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
